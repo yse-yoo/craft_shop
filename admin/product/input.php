@@ -1,11 +1,10 @@
+<?php 
+require_once '../../app.php';
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Product Form</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
+<?php include('../../components/admin_head.php') ?>
 
 <body class="bg-gray-100">
     <?php include('../../components/admin_nav.php') ?>
