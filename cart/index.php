@@ -44,7 +44,7 @@ require_once '../app.php';
       <form action="payment/" method="POST">
         <div class="mt-8 text-center">
           <p class="text-2xl font-bold text-gray-800">合計: ¥13,000</p>
-          <button type="submit" class="mt-4 bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">決済へ</button>
+          <button type="submit" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">決済へ</button>
         </div>
       </form>
     </section>

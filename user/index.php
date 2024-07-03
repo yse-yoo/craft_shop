@@ -22,7 +22,7 @@ $user = [
     <div class="bg-white shadow-md rounded-lg overflow-hidden p-6">
       <h2 class="text-2xl font-bold mb-4">ユーザ情報</h2>
       <div class="my-4">
-        <a href="user/edit.php" class="bg-indigo-500 text-white py-2 px-4 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Edit</a>
+        <a href="user/edit.php" class="bg-blue-500 text-white py-2 px-4 rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Edit</a>
       </div>
 
       <div class="space-y-4">
