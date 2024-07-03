@@ -6,8 +6,8 @@
                 <li><a href="admin/" class="text-gray-600 hover:text-gray-800">Home</a></li>
                 <li><a href="admin/product/" class="text-gray-600 hover:text-gray-800">Product</a></li>
                 <li><a href="admin/artisan/" class="text-gray-600 hover:text-gray-800">Artisan</a></li>
-                <li><a class="text-gray-600 hover:text-gray-800">User</a></li>
-                <li><a class="text-gray-600 hover:text-gray-800">Payment</a></li>
+                <li><a href="admin/user/" class="text-gray-600 hover:text-gray-800">User</a></li>
+                <li><a href="admin/order/" class="text-gray-600 hover:text-gray-800">Order</a></li>
             </ul>
         </nav>
     </div>
