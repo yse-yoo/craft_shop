@@ -23,7 +23,6 @@ require_once '../app.php';
               <h4 class="text-xl font-bold text-gray-800">Product 2</h4>
               <p class="text-gray-600">Price: &yen;21,000</p>
               <div class="mt-4">
-                <span class="text-lg font-bold text-gray-800">¥6,000</span>
                 <a href="cart/remove.php?id=2" class="block mt-2 text-blue-500 hover:underline">削除</a>
               </div>
             </div>
@@ -34,7 +33,6 @@ require_once '../app.php';
               <h4 class="text-xl font-bold text-gray-800">Product 3</h4>
               <p class="text-gray-600">Price: &yen;48,000</p>
               <div class="mt-4">
-                <span class="text-lg font-bold text-gray-800">¥7,000</span>
                 <a href="cart/remove.php?id=3" class="block mt-2 text-blue-500 hover:underline">削除</a>
               </div>
             </div>
