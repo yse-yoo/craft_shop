@@ -30,7 +30,7 @@ require_once '../../app.php';
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700">Image URL</label>
-                <input type="text" name="image_url" class="mt-1 block p-2 w-full border rounded" required>
+                <input type="file" name="image" class="mt-1 block p-2 w-full border rounded" required>
             </div>
             <div class="mb-4">
                 <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Create</button>

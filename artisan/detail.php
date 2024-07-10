@@ -25,7 +25,7 @@ require_once '../app.php';
         </section>
 
         <section>
-            <div id="products" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div id="product" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-white shadow-md rounded-lg overflow-hidden">
                     <img src="images/spoon.jpg" alt="Product 1" class="w-full h-48 object-cover">
                     <div class="p-4">
@@ -34,7 +34,7 @@ require_once '../app.php';
                         <p class="text-gray-600">Price: &yen;33,000</p>
                         <div class="mt-4">
                             <span class="text-lg font-bold text-gray-800">¥5,000</span>
-                            <a href="products/detail.php?id=1" class="block mt-2 text-blue-500 hover:underline">More...</a>
+                            <a href="product/detail.php?id=1" class="block mt-2 text-blue-500 hover:underline">More...</a>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ require_once '../app.php';
                         <p class="text-gray-600">Price: &yen;21,000</p>
                         <div class="mt-4">
                             <span class="text-lg font-bold text-gray-800">¥6,000</span>
-                            <a href="products/detail.php?id=1" class="block mt-2 text-blue-500 hover:underline">More...</a>
+                            <a href="product/detail.php?id=1" class="block mt-2 text-blue-500 hover:underline">More...</a>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ require_once '../app.php';
                         <p class="text-gray-600">Price: &yen;48,000</p>
                         <div class="mt-4">
                             <span class="text-lg font-bold text-gray-800">¥7,000</span>
-                            <a href="products/detail.php?id=1" class="block mt-2 text-blue-500 hover:underline">More...</a>
+                            <a href="product/detail.php?id=1" class="block mt-2 text-blue-500 hover:underline">More...</a>
                         </div>
                     </div>
                 </div>

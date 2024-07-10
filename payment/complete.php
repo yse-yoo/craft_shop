@@ -20,7 +20,7 @@ require_once '../app.php';
         <h3 class="text-2xl font-bold text-gray-800 mb-4">ご購入ありがとうございます！</h3>
         <p class="text-gray-700 mb-6">お客様の注文が正常に処理されました。商品の発送準備が整い次第、ご連絡いたします。</p>
         <div class="space-y-4">
-          <a href="products/" class="block bg-blue-500 text-white py-2 px-4 rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">商品一覧に戻る</a>
+          <a href="product/" class="block bg-blue-500 text-white py-2 px-4 rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">商品一覧に戻る</a>
           <a href="user/" class="block bg-gray-500 text-white py-2 px-4 rounded-md shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">マイページに戻る</a>
         </div>
       </div>

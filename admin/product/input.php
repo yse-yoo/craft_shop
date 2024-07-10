@@ -1,5 +1,9 @@
-<?php 
+<?php
 require_once '../../app.php';
+$product = [];
+if (isset($_SESSION[APP_NAME]['product'])) {
+    $product = $_SESSION[APP_NAME]['product'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -14,11 +18,12 @@ require_once '../../app.php';
         <form method="POST" action="admin/product/add.php" class="bg-white p-6 rounded shadow-md">
             <div class="mb-4">
                 <label class="block text-gray-700">Name</label>
-                <input type="text" name="name" class="mt-1 block p-2 w-full border rounded" required>
+                <input type="text" name="name" value="<?= @$product['name'] ?>" class="mt-1 block p-2 w-full border rounded" required>
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700">category</label>
                 <select name="category_id" class="mt-1 p-2 block w-full border">
+                    <option value="0">-- Category --</option>
                     <option value="1">Leather</option>
                     <option value="2">Gold</option>
                     <option value="2">Silver</option>
@@ -29,6 +34,7 @@ require_once '../../app.php';
             <div class="mb-4">
                 <label class="block text-gray-700">Artisan</label>
                 <select name="artisan_id" class="mt-1 p-2 block w-full border">
+                    <option value="0">-- Artisan --</option>
                     <option value="1">Alice</option>
                     <option value="2">Bob</option>
                     <option value="3">Chris</option>
@@ -36,23 +42,23 @@ require_once '../../app.php';
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700">Price</label>
-                <input type="number" name="price" class="mt-1 block p-2 w-full border rounded" required>
+                <input type="number" name="price" value="<?= @$product['price'] ?>" class="mt-1 block p-2 w-full border rounded" required>
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700">Stock</label>
-                <input type="number" name="stock" class="mt-1 block p-2 w-full border rounded" required>
+                <input type="number" name="stock" value="<?= @$product['stock'] ?>" class="mt-1 block p-2 w-full border rounded" required>
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700">Summary</label>
-                <textarea name="summary" class="mt-1 block p-2 w-full border rounded" required></textarea>
+                <textarea name="summary" class="mt-1 block p-2 w-full border rounded" required><?= @$product['summary'] ?></textarea>
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700">Description</label>
-                <textarea name="description" class="mt-1 block p-2 w-full border rounded" required></textarea>
+                <textarea name="description" class="mt-1 block p-2 w-full border rounded" required><?= @$product['description'] ?></textarea>
             </div>
             <div class="mb-4">
-                <label class="block text-gray-700">Image URL</label>
-                <input type="text" name="image_url" class="mt-1 block p-2 w-full border rounded" required>
+                <label class="block text-gray-700">Image</label>
+                <input type="file" name="image" class="mt-1 block p-2 w-full border rounded">
             </div>
             <div class="mb-4">
                 <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Create</button>

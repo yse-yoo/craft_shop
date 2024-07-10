@@ -4,11 +4,8 @@ require_once '../../app.php';
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit;
 }
-// try {
-//     $stmt = $pdo->prepare($sql);
-//     $stmt->execute($_POST);
-// } catch (PDOException $e) {
-
-// }
+$_SESSION[APP_NAME]['product'] = $_POST;
+$product = new Product();
+$product->insert($_POST);
 
 header('Location: ./');

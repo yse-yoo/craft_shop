@@ -16,7 +16,7 @@ require_once '../app.php';
     </section>
 
     <section>
-        <div id="products" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div id="product" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="bg-white shadow-md rounded-lg overflow-hidden">
             <img src="images/spoon.jpg" alt="Product 2" class="w-full h-48 object-cover">
             <div class="p-4">

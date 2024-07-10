@@ -1,6 +1,6 @@
 ```mermaid
 erDiagram
-    products {
+    product {
         id bigint PK "ID"
         code varchar(255) UK "商品コード"
         name varchar(255) "商品名"

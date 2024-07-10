@@ -1,5 +1,7 @@
 <?php
 require_once './app.php';
+$product = new Product();
+$product->get();
 ?>
 
 <!DOCTYPE html>
@@ -18,43 +20,24 @@ require_once './app.php';
 
     <section>
       <h3 class="text-2xl font-bold text-gray-800 mb-6">おすすめ商品</h3>
-      <div id="products" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img src="images/spoon.jpg" alt="Product 1" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h4 class="text-xl font-bold text-gray-800">Product 1</h4>
-            <p class="text-gray-600">Description of Product 1</p>
-            <p class="text-gray-600">Price: &yen;33,000</p>
-            <div class="mt-4">
-              <span class="text-lg font-bold text-gray-800">¥5,000</span>
-              <a href="products/detail.php?id=1" class="block mt-2 text-blue-500 hover:underline">More...</a>
+      <div id="product" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <?php if ($product->values) : ?>
+          <?php foreach ($product->values as $value) : ?>
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+              <?php if ($value['image_name']) : ?>
+                <img src="<?= PRODUCTS_IMAGE_BASE_URL . $value['image_name'] ?>" alt="<?= $value['image_name'] ?>" class="w-full h-48 object-cover">
+              <?php endif ?>
+              <div class="p-4">
+                <h4 class="text-xl font-bold text-gray-800"><?= $value['name'] ?></h4>
+                <p class="text-gray-600"><?= nl2br($value['summary']) ?></p>
+                <div class="mt-4">
+                  <span class="text-lg font-bold text-gray-800">Price: &yen;<?= number_format($value['price']) ?></span>
+                  <a href="product/detail.php?id=<?= $value['id'] ?>" class="block mt-2 text-blue-500 hover:underline">More...</a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img src="images/spoon.jpg" alt="Product 2" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h4 class="text-xl font-bold text-gray-800">Product 2</h4>
-            <p class="text-gray-600">Description of Product 2</p>
-            <p class="text-gray-600">Price: &yen;21,000</p>
-            <div class="mt-4">
-              <span class="text-lg font-bold text-gray-800">¥6,000</span>
-              <a href="products/detail.php?id=1" class="block mt-2 text-blue-500 hover:underline">More...</a>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img src="images/spoon.jpg" alt="Product 3" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h4 class="text-xl font-bold text-gray-800">Product 3</h4>
-            <p class="text-gray-600">Description of Product 3</p>
-            <p class="text-gray-600">Price: &yen;48,000</p>
-            <div class="mt-4">
-              <span class="text-lg font-bold text-gray-800">¥7,000</span>
-              <a href="products/detail.php?id=1" class="block mt-2 text-blue-500 hover:underline">More...</a>
-            </div>
-          </div>
-        </div>
+          <?php endforeach ?>
+        <?php endif ?>
       </div>
     </section>
 
