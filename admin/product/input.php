@@ -15,7 +15,7 @@ if (isset($_SESSION[APP_NAME]['product'])) {
 
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-2xl font-bold mb-4">New Product</h1>
-        <form method="POST" action="admin/product/add.php" class="bg-white p-6 rounded shadow-md">
+        <form method="POST" enctype="multipart/form-data" action="admin/product/add.php" class="bg-white p-6 rounded shadow-md">
             <div class="mb-4">
                 <label class="block text-gray-700">Name</label>
                 <input type="text" name="name" value="<?= @$product['name'] ?>" class="mt-1 block p-2 w-full border rounded" required>
